@@ -11,4 +11,7 @@ export default {
   taskDescription: "I have hands but cannot clap. What am I?",
   choices: ["1. Wall", "2. Brash", "3. Clock", "4. Dog"],
   correctAnswer: 3,
+  difficulty: "medium",
+  timeLimit: 10,
+  hint: "I help you know when it's time to do something",
 };

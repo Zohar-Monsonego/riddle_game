@@ -12,4 +12,7 @@ export default {
     "I have a long neck and eat leaves from tall trees. What am I?",
   choices: ["1. Lion", "2. Giraffe", "3. Bird", "4. Dog"],
   correctAnswer: 2,
+  difficulty: "easy",
+  timeLimit: 8,
+  hint: "I am the tallest land animal in the world",
 };

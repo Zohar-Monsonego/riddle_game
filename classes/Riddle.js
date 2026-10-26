@@ -13,11 +13,22 @@
 //   - keep asking until the answer is correct
 
 export class Riddle {
-  constructor(id_, name_, taskDescription_, correctAnswer_) {
+  constructor(
+    id_,
+    name_,
+    taskDescription_,
+    correctAnswer_,
+    difficulty_,
+    timeLimit_,
+    hint_,
+  ) {
     this.id = id_;
     this.riddle_name = name_;
     this.taskDescription = taskDescription_;
     this.correctAnswer = correctAnswer_;
+    this.difficulty = difficulty_;
+    this.timeLimit = timeLimit_;
+    this.hint = hint_;
   }
 
   ask(prompt) {

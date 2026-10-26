@@ -16,14 +16,27 @@ export class Player {
     this.times = [];
   }
 
-  recordTime(start, end) {
-    this.times.push(end - start);
+  recordTime(start, end, hint_flag) {
+    if (Date.now() / 1000 - start > 5) {
+      console.log("Too slow! 5 seconds penalty applied");
+      if (hint_flag === 1) {
+        this.times.push(end - start + 5 + 10);
+      } else {
+        this.times.push(end - start + 5);
+      }
+    }
+
+    if (hint_flag === 1) {
+      this.times.push(end - start + 10);
+    } else {
+      this.times.push(end - start);
+    }
   }
 
   showStates() {
     let total_time = 0;
     this.times.forEach((time) => (total_time += time));
     const average = total_time / this.times.length;
-    console.log(`Total time: ${total_time}ms\nAvergae time: ${average} ms`);
+    return `Total time: ${total_time} s\nAvergae time: ${average} s`;
   }
 }

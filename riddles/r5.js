@@ -11,4 +11,7 @@ export default {
   taskDescription: "I get shorter as I get older. What am I?",
   choices: ["1. Person", "2. Candle", "3. Flower", "4. Hair"],
   correctAnswer: 2,
+  difficulty: "easy",
+  timeLimit: 8,
+  hint: "I give light, and I slowly melt when I am used",
 };

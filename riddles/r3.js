@@ -12,4 +12,7 @@ export default {
     "I follow you everywhere when there is light, but disappear in the dark. What am I??",
   choices: ["1. Lamp", "2. Electric", "3. Shadow", "4. Phone"],
   correctAnswer: 3,
+  difficulty: "hard",
+  timeLimit: 12,
+  hint: "You can see me on the ground or on a wall on a sunny day",
 };
