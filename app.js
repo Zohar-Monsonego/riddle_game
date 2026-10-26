@@ -10,3 +10,12 @@
 //    - save the end time (Date.now())
 //    - save the time using player.recordTime()
 // 5. After the loop, call player.showStats() to show total time and average time per riddle.
+
+import PromptSync from "prompt-sync";
+import riddles_arr from "/riddles/index.js";
+const prompt = PromptSync();
+
+console.log("Wellcome to Zohar's riddle game ");
+const player_name = prompt("What is your name?\n");
+
+const player = new Player(player_name);
