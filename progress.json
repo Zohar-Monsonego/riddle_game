@@ -1,1 +1,16 @@
- 
+[
+  {
+    "player_name": "Zohar",
+    "riddle_id": 2,
+    "riddle_name": "The riddle",
+    "riddle_difficulty": "medium",
+    "time_player_solved": "Total time: 43.13800001144409 s\nAvergae time: 21.569000005722046 s"
+  },
+  {
+    "player_name": "Zohar",
+    "riddle_id": 4,
+    "riddle_name": "The challenge",
+    "riddle_difficulty": "medium",
+    "time_player_solved": "Total time: 47.64800000190735 s\nAvergae time: 15.88266666730245 s"
+  }
+]

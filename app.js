@@ -63,13 +63,13 @@ shuffle(
 
   progress_arr.push({
     player_name: `${player.player_name}`,
-    id: riddle_obj.id,
+    riddle_id: riddle_obj.id,
     riddle_name: riddle_obj.riddle_name,
     riddle_difficulty: riddle_obj.difficulty,
     time_player_solved: player.showStates(),
   });
 
-  fs.writeFileSync("progress.json", progress_arr);
+  fs.writeFileSync("progress.json", JSON.stringify(progress_arr, null, 2));
 });
 
 //showing total time after all riddles
