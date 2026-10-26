@@ -12,7 +12,7 @@
 //   - ask the player for an answer using the `prompt` function that is passed in
 //   - keep asking until the answer is correct
 
-class Riddle {
+export class Riddle {
   constructor(id_, name_, taskDescription_, correctAnswer_) {
     this.id = id_;
     this.riddle_name = name_;
@@ -24,8 +24,8 @@ class Riddle {
     console.log(this.taskDescription);
     let user_answer = prompt("Your answer: ");
     while (this.correctAnswer != user_answer) {
-      user_answer = prompt("Oops, try again: ");
+      user_answer = prompt("Oops 🥲, try again: ");
     }
-    console.log("Yayy, CORRECT!");
+    console.log("Yayy, CORRECT! 😍");
   }
 }

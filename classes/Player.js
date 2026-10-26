@@ -10,7 +10,7 @@
 // - showStats()
 //   - show the total time and the average time per riddle
 
-class Player {
+export class Player {
   constructor(_name) {
     this.player_name = _name;
     this.times = [];
@@ -24,6 +24,6 @@ class Player {
     let total_time = 0;
     this.times.forEach((time) => (total_time += time));
     const average = total_time / this.times.length;
-    console.log(`Total time: ${total_time}\nAvergae time: ${average}`);
+    console.log(`Total time: ${total_time}\nAvergae time: ${average} ms`);
   }
 }
