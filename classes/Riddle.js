@@ -22,7 +22,7 @@ export class Riddle {
 
   ask(prompt) {
     console.log(this.taskDescription);
-    let user_answer = prompt("Your answer: ");
+    let user_answer = Number(prompt("Your answer: "));
     while (this.correctAnswer != user_answer) {
       user_answer = prompt("Oops 🥲, try again: ");
     }

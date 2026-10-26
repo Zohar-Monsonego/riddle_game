@@ -9,5 +9,6 @@ export default {
   id: 2,
   name_: "The riddle",
   taskDescription: "I have hands but cannot clap. What am I?",
-  correctAnswer: "Clock",
+  choices: ["1. Wall", "2. Brash", "3. Clock", "4. Dog"],
+  correctAnswer: 3,
 };

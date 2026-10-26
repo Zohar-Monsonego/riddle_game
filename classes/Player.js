@@ -24,6 +24,6 @@ export class Player {
     let total_time = 0;
     this.times.forEach((time) => (total_time += time));
     const average = total_time / this.times.length;
-    console.log(`Total time: ${total_time}\nAvergae time: ${average} ms`);
+    console.log(`Total time: ${total_time}ms\nAvergae time: ${average} ms`);
   }
 }

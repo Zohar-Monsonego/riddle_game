@@ -10,5 +10,6 @@ export default {
   name_: "The mystery",
   taskDescription:
     "I follow you everywhere when there is light, but disappear in the dark. What am I??",
-  correctAnswer: "Shadow",
+  choices: ["1. Lamp", "2. Electric", "3. Shadow", "4. Phone"],
+  correctAnswer: 3,
 };

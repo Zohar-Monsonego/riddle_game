@@ -9,5 +9,6 @@ export default {
   id: 4,
   name_: "The challenge",
   taskDescription: "What has many keys but cannot open a single door?",
-  correctAnswer: "Piano",
+  choices: ["1. House keeper", "2. Car", "3. Bottle", "4. Piano"],
+  correctAnswer: 4,
 };

@@ -15,6 +15,7 @@ import PromptSync from "prompt-sync";
 import riddles_arr from "./riddles/index.js";
 import { Player } from "./classes/Player.js";
 import { Riddle } from "./classes/Riddle.js";
+import { MultipleChoiceRiddle } from "./classes/MultipleChoiceRiddle.js";
 const prompt = PromptSync();
 
 console.log("Wellcome to Zohar's riddle game 🙃");
@@ -23,11 +24,12 @@ const player_name = prompt("What is your name?");
 const player = new Player(player_name);
 
 riddles_arr.forEach((riddle) => {
-  const riddle_obj = new Riddle(
+  const riddle_obj = new MultipleChoiceRiddle(
     riddle.id,
     riddle.name_,
     riddle.taskDescription,
     riddle.correctAnswer,
+    riddle.choices,
   );
 
   const start_time = Date.now();

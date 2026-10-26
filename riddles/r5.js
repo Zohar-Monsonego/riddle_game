@@ -9,5 +9,6 @@ export default {
   id: 5,
   name_: "nice mystery",
   taskDescription: "I get shorter as I get older. What am I?",
-  correctAnswer: "Candle",
+  choices: ["1. Person", "2. Candle", "3. Flower", "4. Hair"],
+  correctAnswer: 2,
 };

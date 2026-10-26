@@ -10,5 +10,6 @@ export default {
   name_: "The animal",
   taskDescription:
     "I have a long neck and eat leaves from tall trees. What am I?",
-  correctAnswer: "Giraffe",
+  choices: ["1. Lion", "2. Giraffe", "3. Bird", "4. Dog"],
+  correctAnswer: 2,
 };
