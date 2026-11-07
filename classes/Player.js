@@ -20,16 +20,16 @@ export class Player {
     if (Date.now() / 1000 - start > 5) {
       console.log("Too slow! 5 seconds penalty applied");
       if (hint_flag === 1) {
-        this.times.push(end - start + 5 + 10);
+        return end - start + 5 + 10;
       } else {
-        this.times.push(end - start + 5);
+        return end - start + 5;
       }
     }
 
     if (hint_flag === 1) {
-      this.times.push(end - start + 10);
+      return end - start + 10;
     } else {
-      this.times.push(end - start);
+      return end - start;
     }
   }
 

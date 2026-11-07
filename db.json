@@ -1,0 +1,140 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "riddles": [
+    {
+      "id": 1,
+      "name_": "The animal",
+      "taskDescription": "I have a long neck and eat leaves from tall trees. What am I?",
+      "choices": [
+        "1. Lion",
+        "2. Giraffe",
+        "3. Bird",
+        "4. Dog"
+      ],
+      "correctAnswer": 2,
+      "difficulty": "easy",
+      "timeLimit": 8,
+      "hint": "I am the tallest land animal in the world"
+    },
+    {
+      "id": 2,
+      "name_": "The riddle",
+      "taskDescription": "I have hands but cannot clap. What am I?",
+      "choices": [
+        "1. Wall",
+        "2. Brash",
+        "3. Clock",
+        "4. Dog"
+      ],
+      "correctAnswer": 3,
+      "difficulty": "medium",
+      "timeLimit": 10,
+      "hint": "I help you know when it's time to do something"
+    },
+    {
+      "id": 3,
+      "name_": "The mystery",
+      "taskDescription": "I follow you everywhere when there is light, but disappear in the dark. What am I??",
+      "choices": [
+        "1. Lamp",
+        "2. Electric",
+        "3. Shadow",
+        "4. Phone"
+      ],
+      "correctAnswer": 3,
+      "difficulty": "hard",
+      "timeLimit": 12,
+      "hint": "You can see me on the ground or on a wall on a sunny day"
+    },
+    {
+      "id": 4,
+      "name_": "The challenge",
+      "taskDescription": "What has many keys but cannot open a single door?",
+      "choices": [
+        "1. House keeper",
+        "2. Car",
+        "3. Bottle",
+        "4. Piano"
+      ],
+      "correctAnswer": 4,
+      "difficulty": "medium",
+      "timeLimit": 10,
+      "hint": "My keys make different sounds when you press them"
+    },
+    {
+      "id": 5,
+      "name_": "nice mystery",
+      "taskDescription": "I get shorter as I get older. What am I?",
+      "choices": [
+        "1. Person",
+        "2. Candle",
+        "3. Flower",
+        "4. Hair"
+      ],
+      "correctAnswer": 2,
+      "difficulty": "easy",
+      "timeLimit": 8,
+      "hint": "I give light, and I slowly melt when I am used"
+    },
+    {
+      "name_": "winks",
+      "taskDescription": "flying",
+      "correctAnswer": "fairy",
+      "id": 6
+    },
+    {
+      "name_": "computer",
+      "taskDescription": "What is flat but eat cheese",
+      "correctAnswer": "mouse",
+      "id": 7
+    }
+  ],
+  "players": [
+    {
+      "name": "Test",
+      "lowestTime": 50,
+      "id": 1
+    },
+    {
+      "name": null,
+      "lowestTime": null,
+      "id": 2
+    },
+    {
+      "name": "Naama",
+      "lowestTime": null,
+      "id": 3
+    },
+    {
+      "name": "Zohar",
+      "lowestTime": 2.209,
+      "id": 4
+    },
+    {
+      "name": "Alena",
+      "lowestTime": null,
+      "id": 5
+    },
+    {
+      "name": "Ann",
+      "lowestTime": null,
+      "id": 6
+    }
+  ]
+}
