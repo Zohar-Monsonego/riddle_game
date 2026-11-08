@@ -53,6 +53,8 @@ try {
   console.error(e);
 }
 
+console.log(player);
+
 //fetching all riddles
 let riddles_arr;
 try {
@@ -117,12 +119,34 @@ while (player_choice !== "0") {
 
       // let updating_player_time;
       if (player.lowestTime === null || player.lowestTime > time) {
-        player.lowestTime = time;
-        await playerApi.updatePlayer(player);
-      }
+        player.lowestTime = time.toFixed(2);
+        let updated = false;
+        let attempts = 0;
 
-      //showing total time after all riddles
-      // console.log(player.showStates());
+        while (!updated && attempts < 5) {
+          attempts++;
+
+          try {
+            const result = await playerApi.updatePlayer(player);
+
+            if (result) {
+              updated = true;
+
+              console.log(
+                chalk.blue(
+                  `Great job, ${player.name}!\nYour time: ${player.lowestTime} seconds\nNew record, time updated after ${attempts} attempts!`,
+                ),
+              );
+            }
+          } catch (e) {
+            console.log(e);
+          }
+        }
+
+        if (!updated) {
+          console.log("failed to update player after 5 attempts");
+        }
+      }
       break;
     case "2": //creating new riddle
       const riddle_name = prompt(

@@ -93,48 +93,39 @@
       "hint": "I give light, and I slowly melt when I am used"
     },
     {
-      "name_": "winks",
-      "taskDescription": "flying",
-      "correctAnswer": "fairy",
-      "id": 6
-    },
-    {
       "name_": "computer",
       "taskDescription": "What is flat but eat cheese",
       "correctAnswer": "mouse",
       "id": 7
+    },
+    {
+      "id": 8,
+      "name": "fruit",
+      "taskDescription": "what is red inside and green outside",
+      "correctAnswer": "watermelon"
+    },
+    {
+      "name_": "db riddle",
+      "taskDescription": "where is the db",
+      "correctAnswer": "in the cloud",
+      "id": 9
     }
   ],
   "players": [
     {
-      "name": "Test",
-      "lowestTime": 50,
+      "name": "Zohar",
+      "lowestTime": 0.41300010681152344,
       "id": 1
     },
     {
-      "name": null,
-      "lowestTime": null,
+      "name": "Aviya",
+      "lowestTime": 0.7769999504089355,
       "id": 2
     },
     {
       "name": "Naama",
-      "lowestTime": null,
+      "lowestTime": "0.56",
       "id": 3
-    },
-    {
-      "name": "Zohar",
-      "lowestTime": 2.209,
-      "id": 4
-    },
-    {
-      "name": "Alena",
-      "lowestTime": null,
-      "id": 5
-    },
-    {
-      "name": "Ann",
-      "lowestTime": null,
-      "id": 6
     }
   ]
 }

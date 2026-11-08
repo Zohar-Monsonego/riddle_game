@@ -21,6 +21,7 @@ export async function createPlayer(name) {
     }),
     headers: {
       "Content-type": "application/json",
+      Connection: "close",
     },
   });
 
@@ -34,15 +35,12 @@ export async function createPlayer(name) {
 }
 
 export async function updatePlayer(player) {
-  const result = await fetch("http://localhost:3000/players/" + player.id, {
+  const result = await fetch("http://[::1]:3000/players/" + player.id, {
     method: "PUT",
-    body: JSON.stringify({
-      id: 4,
-      name: "Zohar",
-      lowestTime: 2.209,
-    }),
+    body: JSON.stringify(player),
     headers: {
       "Content-type": "application/json",
+      Connection: "close",
     },
   });
 

@@ -19,6 +19,7 @@ export async function createRiddle(riddle) {
     body: JSON.stringify(riddle),
     headers: {
       "content-type": "application/json",
+      Connection: "close",
     },
   });
 
@@ -37,6 +38,7 @@ export async function updateRiddle(id, riddle) {
     body: JSON.stringify(riddle),
     headers: {
       "Content-type": "application/json",
+      Connection: "close",
     },
   });
 
