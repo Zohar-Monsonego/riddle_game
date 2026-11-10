@@ -100,15 +100,14 @@
     },
     {
       "id": 8,
-      "name": "fruit",
-      "taskDescription": "what is red inside and green outside",
-      "correctAnswer": "watermelon"
+      "name": "fruitiii",
+      "taskDescription": "what is?",
+      "correctAnswer": "banana"
     },
     {
-      "name_": "db riddle",
-      "taskDescription": "where is the db",
-      "correctAnswer": "in the cloud",
-      "id": 9
+      "id": 10,
+      "taskDescription": "I am known as the king of the jungle, i have a big mane and a powerful roar, who am i? ",
+      "correctAnswer": "Lion"
     }
   ],
   "players": [
@@ -126,6 +125,11 @@
       "name": "Naama",
       "lowestTime": "0.56",
       "id": 3
+    },
+    {
+      "name": "Hadar",
+      "lowestTime": "0.82",
+      "id": 4
     }
   ]
 }

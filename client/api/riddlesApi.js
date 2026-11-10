@@ -1,7 +1,7 @@
 import chalk from "chalk";
 
 export async function getAllRiddles() {
-  const result = await fetch("http://localhost:3000/riddles");
+  const result = await fetch("http://localhost:3000/api/riddles");
 
   if (!result.ok) {
     throw new Error(
@@ -14,7 +14,7 @@ export async function getAllRiddles() {
 }
 
 export async function createRiddle(riddle) {
-  const result = await fetch("http://[::1]:3000/riddles", {
+  const result = await fetch("http://[::1]:3000/api/riddles", {
     method: "POST",
     body: JSON.stringify(riddle),
     headers: {
@@ -33,7 +33,7 @@ export async function createRiddle(riddle) {
 }
 
 export async function updateRiddle(id, riddle) {
-  const result = await fetch("http://[::1]:3000/riddles/" + id, {
+  const result = await fetch("http://[::1]:3000/api/riddles/" + id, {
     method: "PUT",
     body: JSON.stringify(riddle),
     headers: {
@@ -42,6 +42,8 @@ export async function updateRiddle(id, riddle) {
     },
   });
 
+  console.log("Status:", result.status);
+  console.log("Response:", await result.clone().text());
   if (!result.ok) {
     throw new Error(
       chalk.red(
@@ -54,7 +56,7 @@ export async function updateRiddle(id, riddle) {
 }
 
 export async function deleteRiddle(id) {
-  const result = await fetch("http://localhost:3000/riddles/" + id, {
+  const result = await fetch("http://localhost:3000/api/riddles/" + id, {
     method: "DELETE",
   });
 

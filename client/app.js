@@ -19,7 +19,6 @@ import { Player } from "./classes/Player.js";
 import { Riddle } from "./classes/Riddle.js";
 import { MultipleChoiceRiddle } from "./classes/MultipleChoiceRiddle.js";
 const prompt = PromptSync();
-import fs from "node:fs";
 
 function recordTime(start, end, hint_flag) {
   if (Date.now() / 1000 - start > 5) {
@@ -187,17 +186,31 @@ while (player_choice !== "0") {
       let updated_desc = prompt("write the new description: ");
       let updated_answer = prompt("write the updated answer: ");
 
-      try {
-        await riddleApi.updateRiddle(id_riddle, {
-          id: id_riddle,
-          name: updated_name,
-          taskDescription: updated_desc,
-          correctAnswer: updated_answer,
-        });
-        console.log(chalk.green("Riddle updated successfully!"));
-      } catch (e) {
-        console.log(e);
+      let updated = false;
+      let attempts = 0;
+
+      while (!updated && attempts < 5) {
+        attempts++;
+
+        try {
+          await riddleApi.updateRiddle(id_riddle, {
+            id: id_riddle,
+            name: updated_name,
+            taskDescription: updated_desc,
+            correctAnswer: updated_answer,
+          });
+          updated = true;
+        } catch (e) {
+          console.log(e);
+        }
       }
+
+      if (updated) {
+        console.log(
+          chalk.green(`Riddle updated successfully after ${attempts} attempts`),
+        );
+      }
+
       break;
     case "5": //remove a riddle by ID
       const riddle_id = Number(

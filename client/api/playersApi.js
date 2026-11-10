@@ -1,5 +1,5 @@
 export async function findPlayerByName(name) {
-  const result = await fetch("http://[::1]:3000/players?name=" + name);
+  const result = await fetch("http://[::1]:3000/api/players?name=" + name);
 
   if (!result.ok) {
     throw new Error(
@@ -13,7 +13,7 @@ export async function findPlayerByName(name) {
 }
 
 export async function createPlayer(name) {
-  const result = await fetch("http://[::1]:3000/players", {
+  const result = await fetch("http://[::1]:3000/api/players", {
     method: "POST",
     body: JSON.stringify({
       name: name,
@@ -35,7 +35,7 @@ export async function createPlayer(name) {
 }
 
 export async function updatePlayer(player) {
-  const result = await fetch("http://[::1]:3000/players/" + player.id, {
+  const result = await fetch("http://[::1]:3000/api/players/" + player.id, {
     method: "PUT",
     body: JSON.stringify(player),
     headers: {
@@ -56,7 +56,7 @@ export async function updatePlayer(player) {
 }
 
 export async function getAllPlayers() {
-  const result = await fetch("http://[::1]:3000/players");
+  const result = await fetch("http://[::1]:3000/api/players");
 
   if (!result.ok) {
     throw new Error(
